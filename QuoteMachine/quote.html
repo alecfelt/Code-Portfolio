@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="quote.css"></link>
+  <script src="quote.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  <script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
+</head>
+<body>
+
+  <script>
+
+    var tweetUrl="https://twitter.com/intent/tweet?";
+    var text="";
+    var img="";
+
+    function tweet(){
+      window.open(tweetUrl + "text=" + text + "&url=" + img);
+    }
+
+    function getImg(url){
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": url,
+        "method": "GET",
+        "headers": {
+          "authorization": "Client-ID e3b69d0faec9b79"
+        }
+      }
+      $.ajax(settings).done(function (response) {
+        $("#quote-text").text("success");
+        var images = response.data.images;
+        img = images[Math.floor(Math.random()*(images.length))].link;
+        $("#quote-text").html("<img src=\"" + img + "\"></img>");
+      });
+    }
+
+    function sadQuote() {
+      text = "sadQuote";
+      $("#quote-text").text(text);
+      getImg("http://api.imgur.com/3/gallery/UKtF0");
+    }
+
+    function funnyQuote() {
+      text = "happyQuote";
+      $("#quote-text").text(text);
+      getImg("http://api.imgur.com/3/gallery/00Sc8")
+    }
+
+    function motivationalQuote() {
+      text = "motivationalQuote";
+      $("#quote-text").text(text);
+      getImg("http://api.imgur.com/3/gallery/knRAx/");
+    }
+
+  </script>
+
+  <div class="fluid-container">
+
+    <div id="title" class="text-center">
+      <h1>
+        Random Quote Machine
+      </h1>
+    </div>
+
+    <div id="buttons" class="text-center row">
+      <div id="sad" class="col-4">
+        <button id="sad-button" onclick="sadQuote()" type="button">
+          Sad
+        </button>
+      </div>
+      <div id="funny" class="col-4">
+        <button id="funny-button" onclick="funnyQuote()" type="button">
+          Funny
+        </button>
+      </div>
+      <div id="motivational" class="col-4">
+        <button id="motivational-button" onclick="motivationalQuote()" type="button">
+          Motivational
+        </button>
+      </div>
+    </div>
+
+    <div id="quote" class="text-center">
+      <div id="quote-text">
+        Quote goes here.
+      </div>
+      <div id="tweet" onclick="tweet()">
+        <a href="">
+          <i id="tweet-button" class="fa fa-twitter-square"></i>
+        </a>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</body>
+
+</html>
