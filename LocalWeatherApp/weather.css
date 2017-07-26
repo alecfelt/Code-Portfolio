@@ -1,0 +1,23 @@
+body {
+  background-color: LightSteelBlue;
+}
+
+#title {
+  font-size: 6vw;
+  font-family: Aclonica;
+}
+
+#weather-icon {
+  margin: 0% 0% 10% 0%;
+  color: blue;
+}
+
+#temp-number {
+  margin: 0% 0% 10% 0%;
+  color: blue;
+}
+
+#wind-number {
+  margin: 0% 0% 10% 0%;
+  color: blue;
+}
