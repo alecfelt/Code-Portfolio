@@ -1,0 +1,62 @@
+html, body, #target{
+  background: slategray;
+}
+
+#search-bar {
+  margin-top: 30vw;
+  margin-bottom: 10%;
+  font-family: Montserrat;
+  background: slategray;
+}
+
+input {
+  -moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+
+input[type=text] {
+    width: 30%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    color: gray;
+}
+
+input[type=text]:focus {
+    width: 70%;
+    color: dimgray;
+    outline: none;
+}
+
+.emphasize-inset {
+  margin: 0% 15% 3% 15%;
+  padding: 2% 0% 2% 0%;
+  background: dimgray;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+
+.emphasize-inset:hover {
+  text-decoration: none;
+}
+
+.loader {
+  margin-top: 10%;
+  margin: auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

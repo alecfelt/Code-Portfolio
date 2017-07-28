@@ -1,20 +1,18 @@
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(updateWeather);
-    $("h1").text("success");
+    $("h1").html("Local Weather App loading...");
   } else {
-    $("h1").text("failure");
+    $("h1").text("HTML5 Geolocation services aren't working :()");
   }
 }
 
 function updateWeather(location) {
-  $("h1").html("updateWeather");
   var coords = location.coords;
   var lat = coords.latitude;
   var lon = coords.longitude;
   var alt = coords.altitude;
   var time = location.timestamp;
-  $("h1").html("latitude: " + lat + "<br>longitude: " + lon + "<br>altitude: " + alt + "<br>timestamp: " + time);
   getWeather("https://fcc-weather-api.glitch.me/api/current?lat=" + lat + "&lon=" + lon);
 }
 
