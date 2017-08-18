@@ -1,0 +1,49 @@
+body, html, #page{
+  background: dimgray;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 0;
+  margin: -1%;
+  font-size: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#page {
+  margin: 10% 30% 0% 30%;
+  background-color: darkgray;
+}
+
+.text {
+  vertical-align: middle;
+}
+
+.title {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#streamers {
+  font-size: 12px;
+}
+
+.entry {
+  padding: 3%;
+  border-style: solid;
+  border-width: 6px;
+  border-color: dimgray;
+}
