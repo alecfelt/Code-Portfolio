@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha3812-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha3812-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg12Va+PmSTsz/K68vbdEjh12u" crossorigin="anonymous">
+  <link rel="stylesheet" href="calc.css">
+  <script src="calc.js"></script>
+</header>
+
+<body>
+
+  <div class="container-fluid text-center">
+
+    <div id="text-box">
+      <input id="text" type="text" value="">
+    </div>
+
+    <div id="row1" class="row">
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="seven()">7</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="eight()">8</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="nine()">9</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="add()">+</button></div>
+    </div>
+
+    <div id="row2" class="row">
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="four()">4</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="five()">5</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="six()">6</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="subtract()">-</button></div>
+    </div>
+
+    <div id="row3" class="row">
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="one()">1</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="two()">2</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="three()">3</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="multiply()">x</button></div>
+    </div>
+
+    <div id="row4" class="row">
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="zero()">0</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="point()">.</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="equals()">=</button></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"><button type="button" class="button1" onclick="divide()">÷</button></div>
+    </div>
+
+    <div id="clear">
+      <button type="button" class="button2" onclick="cl()">Clear</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
